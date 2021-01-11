@@ -10,13 +10,12 @@ namespace RobotsVsDinosaurs
     {
         
 
-        List<Dinosaur> herdList = new List<Dinosaur>()
+        public List<Dinosaur> herdList = new List<Dinosaur>()
 
         {
         new Dinosaur("T-Rex", 200, 300, 50),
         new Dinosaur("Velociraptor", 100, 100, 10),
         new Dinosaur("Allosaurus", 200, 200, 10)
-
         };
 
         
