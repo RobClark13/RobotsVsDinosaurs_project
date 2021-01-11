@@ -11,9 +11,9 @@ namespace RobotsVsDinosaurs
         public List<Robot> fleetList = new List<Robot>()
 
         {
-        new Robot("R2", 100, 200, "Laser", 5),
-        new Robot("C3P0", 50, 100, "Fist", 2),
-        new Robot("HK-47", 500, 500, "Gun", 25)
+        new Robot("R2", 100, 200, "Laser", 4),
+        new Robot("C3P0", 100, 100, "Fist", 4),
+        new Robot("HK-47", 100, 500, "Gun", 4)
         };
 
 

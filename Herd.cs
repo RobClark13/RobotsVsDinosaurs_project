@@ -13,9 +13,9 @@ namespace RobotsVsDinosaurs
         public List<Dinosaur> herdList = new List<Dinosaur>()
 
         {
-        new Dinosaur("T-Rex", 200, 300, 50),
-        new Dinosaur("Velociraptor", 100, 100, 10),
-        new Dinosaur("Allosaurus", 200, 200, 10)
+        new Dinosaur("T-Rex", 100, 300, 4),
+        new Dinosaur("Velociraptor", 100, 100, 4),
+        new Dinosaur("Allosaurus", 100, 100, 4)
         };
 
         
