@@ -24,6 +24,15 @@ namespace RobotsVsDinosaurs
 
         }
 
+        public void RobotAttack()
+        {
+            
+
+
+
+
+        }
+
 
 
 

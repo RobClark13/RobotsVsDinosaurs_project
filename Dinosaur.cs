@@ -21,6 +21,12 @@ namespace RobotsVsDinosaurs
             this.dinoAttackPower = dinoAttackPower;
         }
 
+        public void DinoAttackRobot() 
+        { 
+        
+        
+        }
+
 
 
 
