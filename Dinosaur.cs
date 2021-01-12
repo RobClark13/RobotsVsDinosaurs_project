@@ -50,7 +50,7 @@ namespace RobotsVsDinosaurs
             int dinoAttackModifier = DinoAttackModifier();
             robot.robotHealth -= dinoAttackPowerArray[dinoAttackNumber] * dinoAttackModifier;
             dinoEnergy -= 10;
-            Console.WriteLine(dinoEnergy);
+            Console.WriteLine(dinoName +" uses " + dinoAttackNameArray[dinoAttackNumber]);
             //Console.ReadLine();
         }
 

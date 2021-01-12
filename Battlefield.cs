@@ -24,7 +24,6 @@ namespace RobotsVsDinosaurs
 
         public void RunBattle()
         {
-            WeaponList weapon_List = new WeaponList();
             Fleet fleet = new Fleet();
             Herd herd = new Herd();
            
@@ -58,7 +57,7 @@ namespace RobotsVsDinosaurs
                     Console.WriteLine(fleet.fleetList[0].robotName + " is defeated");
                     Console.ReadLine();
                     fleet.fleetList.RemoveAt(0);
-                    fleet.fleetList[0].RobotChooseWeapon(fleet);
+                    //fleet.fleetList[0].RobotChooseWeapon(fleet);
                 }
                 else if (fleet.fleetList[0].robotHealth <= 0)
                 {

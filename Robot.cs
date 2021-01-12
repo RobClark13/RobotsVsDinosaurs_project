@@ -63,8 +63,12 @@ namespace RobotsVsDinosaurs
 
         public void RobotChooseWeapon(Fleet fleet)
         {
-            int weaponChoiceNumber = WeaponChoiceNumber();
-            fleet.fleetList[0].robotWeapon = weaponList[weaponChoiceNumber];
+            int weaponChoiceNumber1 = WeaponChoiceNumber();
+            int weaponChoiceNumber2 = WeaponChoiceNumber();
+            int weaponChoiceNumber3 = WeaponChoiceNumber();
+            fleet.fleetList[0].robotWeapon = weaponList[weaponChoiceNumber1];
+            fleet.fleetList[1].robotWeapon = weaponList[weaponChoiceNumber2];
+            fleet.fleetList[2].robotWeapon = weaponList[weaponChoiceNumber3];
         }
         
 
