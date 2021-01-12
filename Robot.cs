@@ -22,6 +22,7 @@ namespace RobotsVsDinosaurs
         new Weapon ("Bowcaster", 4)
         };
         Random robotRandom;
+        Random robotAttackModifier;
 
         //constructor
         public Robot(string robotName, int robotHealth, int robotPowerLevel, string weaponName, int weaponAttackPower)
@@ -31,6 +32,7 @@ namespace RobotsVsDinosaurs
             this.robotPowerLevel = robotPowerLevel;
             this.robotWeapon = new Weapon(weaponName, weaponAttackPower); //RobotChooseWeapon();
             robotRandom = new Random();
+            robotAttackModifier = new Random();
         }
 
         //member methods (CAN DO)
@@ -40,9 +42,16 @@ namespace RobotsVsDinosaurs
             return robotRandom.Next(3);
         }
 
+        public int RobotAttackModifier()
+        {
+            return robotAttackModifier.Next(1,4);
+
+        }
+
         public void RobotAttack(Dinosaur dinosaur)
         {
-            dinosaur.dinoHealth -= robotWeapon.weaponAttackPower;
+            int robotAttackModifier = RobotAttackModifier();
+            dinosaur.dinoHealth -= robotWeapon.weaponAttackPower*robotAttackModifier;
             robotPowerLevel -= 10;
         }
 
@@ -56,8 +65,6 @@ namespace RobotsVsDinosaurs
         {
             int weaponChoiceNumber = WeaponChoiceNumber();
             fleet.fleetList[0].robotWeapon = weaponList[weaponChoiceNumber];
-
-
         }
         
 

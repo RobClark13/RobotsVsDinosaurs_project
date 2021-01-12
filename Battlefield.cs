@@ -53,12 +53,18 @@ namespace RobotsVsDinosaurs
                     herd.herdList[0].DinoChooseAttack(fleet.fleetList[0]);
                 }
 
-                if (fleet.fleetList[0].robotHealth <= 0)
+                if (fleet.fleetList[0].robotHealth <= 0 && fleet.fleetList.Count > 1)
                 {
                     Console.WriteLine(fleet.fleetList[0].robotName + " is defeated");
                     Console.ReadLine();
                     fleet.fleetList.RemoveAt(0);
                     fleet.fleetList[0].RobotChooseWeapon(fleet);
+                }
+                else if (fleet.fleetList[0].robotHealth <= 0)
+                {
+                    Console.WriteLine(fleet.fleetList[0].robotName + " is defeated");
+                    Console.ReadLine();
+                    fleet.fleetList.RemoveAt(0);
                 }
                 else if (herd.herdList[0].dinoHealth <= 0)
                 {
