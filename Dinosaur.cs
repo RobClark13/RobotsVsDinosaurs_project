@@ -25,11 +25,11 @@ namespace RobotsVsDinosaurs
             this.dinoAttackPower = dinoAttackPower;
             dinorand = new Random();
         }
-                   
+
 
         public void DinoAttack(Robot robot)
         {
-            robot.robotHealth -=  dinoAttackPower;
+            robot.robotHealth -= dinoAttackPower;
         }
 
         public int DinoAttackNumber()
@@ -37,15 +37,30 @@ namespace RobotsVsDinosaurs
             return dinorand.Next(3);
 
         }
-        
-        public void DinoChooseAttack(Robot robot)
-        {        
-        
-            int dinoAttackNumber = DinoAttackNumber();
-            Console.WriteLine(dinoAttackNameArray[dinoAttackNumber]);
-            Console.WriteLine(dinoAttackPowerArray[dinoAttackNumber]);
-            robot.robotHealth -= dinoAttackPowerArray[dinoAttackNumber];
+
+        public int DinoAttackModifier()
+        {
+            return dinorand.Next(1, 5);
+
         }
+
+        public void DinoChooseAttack(Robot robot)
+        {
+            int dinoAttackNumber = DinoAttackNumber();
+            int dinoAttackModifier = DinoAttackModifier();
+            robot.robotHealth -= dinoAttackPowerArray[dinoAttackNumber] * dinoAttackModifier;
+            dinoEnergy -= 10;
+            Console.WriteLine(dinoEnergy);
+            Console.ReadLine();
+        }
+
+        public void DinoRest()
+        {
+            Console.WriteLine(dinoName + " takes a nap" ); 
+            dinoEnergy = 100;
+
+        }
+
 
 
 

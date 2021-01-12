@@ -17,13 +17,7 @@ namespace RobotsVsDinosaurs
         new Weapon ("Bowcaster", 4)
         };
 
-        public WeaponList()
-        {
-
-
-
-        }
-
+        
 
 
     }

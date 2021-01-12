@@ -45,6 +45,20 @@ namespace RobotsVsDinosaurs
                 {
                     herd.herdList.RemoveAt(0);
                 }
+
+                if (herd.herdList[0].dinoEnergy == 0 && fleet.fleetList[0].robotPowerLevel == 0)
+                {
+                    herd.herdList[0].DinoRest();
+                    fleet.fleetList[0].RobotRest();
+                }
+                else if (herd.herdList[0].dinoEnergy == 0)
+                {
+                    herd.herdList[0].DinoRest();
+                }
+                else if (fleet.fleetList[0].robotPowerLevel == 0)
+                {
+                    fleet.fleetList[0].RobotRest();
+                }
             }
             if (fleet.fleetList.Count == 0)
             {
