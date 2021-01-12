@@ -51,7 +51,7 @@ namespace RobotsVsDinosaurs
             robot.robotHealth -= dinoAttackPowerArray[dinoAttackNumber] * dinoAttackModifier;
             dinoEnergy -= 10;
             Console.WriteLine(dinoEnergy);
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
         public void DinoRest()

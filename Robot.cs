@@ -21,7 +21,7 @@ namespace RobotsVsDinosaurs
         new Weapon("Vibroblade", 3),
         new Weapon ("Bowcaster", 4)
         };
-        Random rand;
+        Random robotRandom;
 
         //constructor
         public Robot(string robotName, int robotHealth, int robotPowerLevel, string weaponName, int weaponAttackPower)
@@ -30,13 +30,14 @@ namespace RobotsVsDinosaurs
             this.robotHealth = robotHealth;
             this.robotPowerLevel = robotPowerLevel;
             this.robotWeapon = new Weapon(weaponName, weaponAttackPower); //RobotChooseWeapon();
+            robotRandom = new Random();
         }
 
         //member methods (CAN DO)
 
         public int WeaponChoiceNumber()
         {
-            return rand.Next(3);
+            return robotRandom.Next(3);
         }
 
         public void RobotAttack(Dinosaur dinosaur)
@@ -51,10 +52,10 @@ namespace RobotsVsDinosaurs
             Console.WriteLine(robotName+ " shuts down for maintenance");
         }
 
-        public void RobotChooseWeapon()
+        public void RobotChooseWeapon(Fleet fleet)
         {
-
-
+            int weaponChoiceNumber = WeaponChoiceNumber();
+            fleet.fleetList[0].robotWeapon = weaponList[weaponChoiceNumber];
 
 
         }
