@@ -24,6 +24,7 @@ namespace RobotsVsDinosaurs
 
         public void RunBattle()
         {
+            WeaponList weapon_List = new WeaponList();
             Fleet fleet = new Fleet();
             Herd herd = new Herd();
            
@@ -31,7 +32,7 @@ namespace RobotsVsDinosaurs
             while (fleet.fleetList.Count > 0 && herd.herdList.Count > 0)
             {
                 fleet.fleetList[0].RobotAttack(herd.herdList[0]);
-                herd.herdList[0].DinoAttack(fleet.fleetList[0]);
+                herd.herdList[0].DinoChooseAttack(fleet.fleetList[0]);
                 Console.WriteLine(herd.herdList[0].dinoName + "'s health is at: " + herd.herdList[0].dinoHealth);
                 Console.WriteLine(fleet.fleetList[0].robotName + "'s health is at: " + fleet.fleetList[0].robotHealth);
 
